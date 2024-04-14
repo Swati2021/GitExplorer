@@ -1,28 +1,8 @@
-# Fyle Frontend Challenge
+# Git Explorer
 
-## Who is this for?
+## Aim of the Application
 
-This challenge is meant for candidates who wish to intern at Fyle and work with our engineering team. The candidate should be able to commit to at least 6 months of dedicated time for internship.
-
-## Why work at Fyle?
-
-Fyle is a fast-growing Expense Management SaaS product. We are ~40 strong engineering team at the moment. 
-
-We are an extremely transparent organization. Check out our [careers page](https://careers.fylehq.com) that will give you a glimpse of what it is like to work at Fyle. Also, check out our Glassdoor reviews [here](https://www.glassdoor.co.in/Reviews/Fyle-Reviews-E1723235.htm). You can read stories from our teammates [here](https://stories.fylehq.com).
-
-## Challenge outline
-
-This challenge involves implementing application using github api. 
-
-The services that you need to use are already implemented - check out ApiService.
-
-You can see details of this challenge [here](https://fyleuniverse.notion.site/fyleuniverse/Fyle-Frontend-development-challenge-cb5085e5e0864e769e7b98c694400aaa)
-
-__Note__ - This challenge is in angular. We work on angular frameworks & after you join we expect the same from you. Hence it is required to complete this assignement in angular itself.
-
-## What happens next?
-
-You will hear back within 48 hours from us via email.
+The primary aim of the application is to provide a user-friendly interface that allows users to retrieve detailed information about GitHub users by simply entering their usernames. 
 
 ## Installation
 
@@ -31,13 +11,23 @@ You will hear back within 48 hours from us via email.
 
 ### Install requirements
 * Install angular cli [Ref](https://angular.io/cli)
-* `npm install` in this repository 
+* `npm install` in this repository
+* Default branch is Master, checkout to master branch.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to http://localhost:4200/. The app will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to http://localhost:4200/. The app will open.
+
+## Run Unit Test
+
+Run ng test to execute the unit tests via Karma.
+
+## Steps to run application
+* We have a search bar with seach button on top, we have to enter a valid github user name and click on button or press enter.
+* It fetches the basic details of the valid user with the name of public repo.
+* If we enter a invalid data it desplays No data found message.
+* We have a paginations at bottom which is implemenent by the use of Angular material. It helps us to change the page.
 
 ## Further help
 
 Visit the [Angular Documentation](https://angular.io/guide/styleguide) to learn more.
-Styling is to be strictly done with [Tailwind](https://tailwindcss.com/docs/installation).
