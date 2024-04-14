@@ -1,0 +1,20 @@
+<div *ngIf="userData" class="px-4 mx-3 my-4 bg-white shadow-md rounded flex items-start">
+    <div class="flex flex-col items-center space-y-4">
+        <img [src]="userData?.avatar_url" alt="GitHub Avatar" class="w-44 h-44 rounded-full">
+        <div class="flex items-center space-x-2">
+            <button (click)="copyLink(userData?.html_url)" class="focus:outline-none">
+                <i class="fas fa-copy"></i>
+            </button>
+            <a href="{{ userData?.html_url }}" target="_blank" class="text-blue-500 hover:text-blue-700">{{ userData?.html_url }}</a>
+        </div>
+    </div>
+    <div class="ml-6">
+        <h2 class="text-xl font-bold">{{ userData?.name }}</h2>
+        <p *ngIf="userData?.bio">{{ userData?.bio }}</p>
+        <p *ngIf="userData?.location">
+            <i class="fas fa-map-marker-alt mr-2"></i>{{ userData?.location }}
+        </p>
+        <p *ngIf="userData?.twitter_username">Twitter: {{userData?.twitter_username}}</p>
+    </div>
+</div>
+<app-git-repository *ngIf="userData?.public_repos" [repositoryUrl]="userData?.repos_url" [totalPublicRepo]="userData?.public_repos"></app-git-repository>

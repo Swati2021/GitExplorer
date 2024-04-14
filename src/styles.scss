@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Animation for skeleton effect */
+@keyframes loading {
+    0% {
+        background-color: #ddd;
+    }
+    50% {
+        background-color: #ccc;
+    }
+    100% {
+        background-color: #ddd;
+    }
+}
+
+.line {
+    animation: loading 1.5s infinite;
+}
+

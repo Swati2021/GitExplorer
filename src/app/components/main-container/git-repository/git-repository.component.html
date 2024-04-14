@@ -1,0 +1,23 @@
+<div *ngIf="apiService.loading$ | async as isLoading">
+    <app-skeleton-repo *ngIf="isLoading"></app-skeleton-repo>
+</div>
+<div class="px-4 mx-3 my-4 bg-white shadow-lg rounded-lg">
+    <div class="grid grid-cols-2 gap-4">
+        <div *ngFor="let repo of repositriesData" class="p-4 bg-white border border-gray-200 rounded-lg shadow">
+            <h3 class="text-lg font-medium text-gray-800">{{ repo?.name }}</h3>
+            <p class="text-sm text-gray-600">{{ repo?.description }}</p>
+            <div class="flex flex-wrap gap-2 mt-2">
+                <span *ngFor="let topic of repo?.topics" class="bg-white shadow-lg rounded-lg px-2 py-1 text-xs rounded font-normal">
+                    {{ topic }}
+                </span>
+            </div>
+        </div>
+    </div>
+    <mat-paginator [length]="totalPublicRepo"
+                   [pageSize]="pageSize"
+                   [pageSizeOptions]="[10, 20, 50, 100]"
+                   (page)="handlePageEvent($event)"
+                   class="py-4">
+    </mat-paginator>
+</div>
+
