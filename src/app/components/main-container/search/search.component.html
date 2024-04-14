@@ -1,0 +1,8 @@
+<div class="px-4 py-2 mx-3 my-2 bg-white shadow-md rounded">
+    <form  [formGroup]="searchForm" (ngSubmit)="onSubmit()" class="flex items-center">
+        <input formControlName="searchTerm" type="text" placeholder="Enter github user name.." class="flex-grow p-2 outline-none focus:outline-none focus:border-custom-red border-2 border-transparent rounded-l-md h-10" />
+        <button type="submit" class="bg-custom-red text-white p-2 rounded-r-md h-10 focus:outline-none">
+            <i class="fas fa-search"></i> Search
+        </button>
+    </form>
+</div>

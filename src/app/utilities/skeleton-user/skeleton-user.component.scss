@@ -1,0 +1,65 @@
+.skeleton-loader-user {
+    display: flex;
+    flex-direction: column; /* Ensures the main layout is vertical */
+    padding: 16px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.skeleton-loader-user .top-info {
+    display: flex;
+    flex-direction: row; /* Ensures the top info is laid out in a row */
+    align-items: center; /* Centers items vertically */
+    width: 100%; /* Takes full width of the container */
+}
+
+.skeleton-loader-user .avatar {
+    width: 88px;
+    height: 88px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin-right: 10px; /* Space between avatar and info */
+}
+
+.skeleton-loader-user .info {
+    display: flex;
+    flex-direction: column; /* Ensures the info within the top-info is laid out in column */
+    flex-grow: 1; /* Takes remaining space */
+}
+
+.skeleton-loader-user .info .line {
+    height: 20px;
+    background-color: #ddd;
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.skeleton-loader-user .info .line.name {
+    width: 70%; /* Adjusts width of the name line */
+}
+
+.skeleton-loader-user .info .line.bio {
+    width: 90%; /* Adjusts width of the bio line */
+}
+
+.skeleton-loader-user .bottom-info {
+    width: 100%; /* Ensures bottom info takes full width */
+    display: flex;
+    flex-direction: column; /* Arranges any additional lines in a column */
+    margin-top: 10px; /* Space between top info and bottom info */
+}
+
+.skeleton-loader-user .bottom-info .line {
+    height: 20px;
+    background-color: #ddd;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    width: 50%; /* Adjust as necessary */
+}
+
+.skeleton-loader-user .content .line.location,
+.skeleton-loader-user .content {
+    width: 50%;
+}
+  

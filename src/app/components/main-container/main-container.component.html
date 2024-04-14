@@ -1,0 +1,11 @@
+<header class="fixed top-0 w-full z-50 bg-custom-red text-white text-center p-4 text-xl md:text-2xl lg:text-3xl">
+    Git Explorer
+</header>
+<div class="pt-20"> 
+    <app-search (searchedData)="searchedData($event)"></app-search>
+    <app-user-list *ngIf="!userDataLoader && !isEmpty(userData)" [userData] = userData></app-user-list>     
+</div>
+<div *ngIf="noDataFound" class="text-center mt-4">
+    <p class="text-lg text-gray-600 font-semibold">No user data available.</p>
+</div>
+<app-skeleton-user *ngIf="userDataLoader"></app-skeleton-user>
